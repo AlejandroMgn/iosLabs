@@ -26,6 +26,8 @@ class TareaCompletadaViewController: UIViewController {
     }
     
     @IBAction func completarTarea(_ sender: Any) {
+        anteriorVC.tareas.remove(at: anteriorVC.indexSeleccionado)
+        navigationController?.popViewController(animated: true)
     }
     
 

@@ -164,8 +164,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkL-U6-yPC">
-                                <rect key="frame" x="164" y="134" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="142" y="134" width="90" height="30"/>
+                                <state key="normal" title="Completar!!!!"/>
                                 <connections>
                                     <action selector="completarTarea:" destination="u0t-TP-Ato" eventType="touchUpInside" id="2P5-Vp-KlP"/>
                                 </connections>

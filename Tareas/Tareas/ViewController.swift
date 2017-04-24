@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var tareas:[Tarea] = []
-    var indexSeleccionado = 0
+    var indexSeleccionado:Int = 0
     
     
     override func viewDidLoad() {
@@ -25,6 +25,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
