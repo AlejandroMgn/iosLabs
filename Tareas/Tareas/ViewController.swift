@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var tareas:[Tarea] = []
+    var indexSeleccionado = 0
     
     
     override func viewDidLoad() {
@@ -42,6 +43,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexSeleccionado = indexPath.row
+        let tarea = tareas[indexPath.row]
+        performSegue(withIdentifier: "tareaSeleccionadaSegue", sender: tarea)
+    }
+    
     func crearTareas() -> [Tarea]{
         
         let tarea1 = Tarea()
@@ -53,8 +60,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tarea2.importante = true
         
         let tarea3 = Tarea()
-        tarea3.nombre = "Lavar los servicios"
-        tarea3.importante = false
+        tarea3.nombre = "Go chongaso"
+        tarea3.importante = true
         
         return [tarea1, tarea2, tarea3]
         
@@ -65,6 +72,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "agregarSegue", sender: nil)
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "agregarSegue" {
+            let siguienteVC = segue.destination as! CrearTareaViewController
+            siguienteVC.anteriorVC = self
+        }
+        if segue.identifier == "tareaSeleccionadaSegue" {
+            let siguienteVC = segue.destination as! TareaCompletadaViewController
+            siguienteVC.tarea = sender as! Tarea
+            siguienteVC.anteriorVC = self
+        }
+    }
+    
+    
     
 
 }

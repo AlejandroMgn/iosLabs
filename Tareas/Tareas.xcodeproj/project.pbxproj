@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9EF80E31EAE8F1C0000F3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF80E21EAE8F1C0000F3BC /* Main.storyboard */; };
+		A9EF80E51EAE91320000F3BC /* TareaCompletadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF80E41EAE91320000F3BC /* TareaCompletadaViewController.swift */; };
 		CDD1BC8A1E9C346C0099D08E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1BC891E9C346C0099D08E /* AppDelegate.swift */; };
 		CDD1BC8C1E9C346C0099D08E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1BC8B1E9C346C0099D08E /* ViewController.swift */; };
 		CDD1BC921E9C346C0099D08E /* Tareas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDD1BC901E9C346C0099D08E /* Tareas.xcdatamodeld */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9EF80E21EAE8F1C0000F3BC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A9EF80E41EAE91320000F3BC /* TareaCompletadaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TareaCompletadaViewController.swift; sourceTree = "<group>"; };
 		CDD1BC861E9C346C0099D08E /* Tareas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tareas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD1BC891E9C346C0099D08E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD1BC8B1E9C346C0099D08E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				CDD1BC981E9C346C0099D08E /* Info.plist */,
 				CDD1BC901E9C346C0099D08E /* Tareas.xcdatamodeld */,
 				CDE005AA1EAE4C6400B715C6 /* CrearTareaViewController.swift */,
+				A9EF80E21EAE8F1C0000F3BC /* Main.storyboard */,
+				A9EF80E41EAE91320000F3BC /* TareaCompletadaViewController.swift */,
 			);
 			path = Tareas;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9EF80E31EAE8F1C0000F3BC /* Main.storyboard in Resources */,
 				CDD1BC971E9C346C0099D08E /* LaunchScreen.storyboard in Resources */,
 				CDD1BC941E9C346C0099D08E /* Assets.xcassets in Resources */,
 			);
@@ -146,6 +153,7 @@
 				CDD1BC8C1E9C346C0099D08E /* ViewController.swift in Sources */,
 				CDD1BC921E9C346C0099D08E /* Tareas.xcdatamodeld in Sources */,
 				CDD1BC8A1E9C346C0099D08E /* AppDelegate.swift in Sources */,
+				A9EF80E51EAE91320000F3BC /* TareaCompletadaViewController.swift in Sources */,
 				CDD1BC9F1E9C3A5C0099D08E /* Tarea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,34 +1,31 @@
 //
-//  CrearTareaViewController.swift
+//  TareaCompletadaViewController.swift
 //  Tareas
 //
-//  Created by Tecsup on 24/04/17.
+//  Created by Alejandro Mendoza on 24/04/17.
 //  Copyright © 2017 Tecsup. All rights reserved.
 //
 
 import UIKit
 
-class CrearTareaViewController: UIViewController {
+class TareaCompletadaViewController: UIViewController {
 
-    @IBOutlet weak var txtNombreTarea: UITextField!
-    @IBOutlet weak var swImportante: UISwitch!
-    
+    var tarea = Tarea()
     var anteriorVC = ViewController()
     
+    @IBOutlet weak var tareaLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if tarea.importante {
+            tareaLabel.text = "⭐️ \(tarea.nombre)"
+        }else{
+            tareaLabel.text = tarea.nombre
+        }
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func agregar(_ sender: Any) {
-        let tarea = Tarea()
-        tarea.nombre = txtNombreTarea.text!
-        tarea.importante = swImportante.isOn
-        
-        anteriorVC.tareas.append(tarea)
-        anteriorVC.tableView.reloadData()
-        navigationController!.popViewController(animated: true)
+    
+    @IBAction func completarTarea(_ sender: Any) {
     }
     
 
